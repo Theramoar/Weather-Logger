@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cGW-Fw-WPy">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Weather Logger-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" customModule="Weather_Logger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZLo-RM-bBA">
+                                <rect key="frame" x="0.0" y="140" width="414" height="654"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VLX-04-TnI">
+                                <rect key="frame" x="69" y="426.5" width="276" height="43.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You don't have any saved data" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7TP-tR-U0L">
+                                        <rect key="frame" x="0.0" y="0.0" width="276" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap button below to save data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HlJ-Cc-zfs">
+                                        <rect key="frame" x="29.5" y="24" width="217.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sll-PG-eCQ">
+                                <rect key="frame" x="0.0" y="794" width="414" height="68"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="phT-TK-iEu">
+                                        <rect key="frame" x="15" y="8" width="384" height="52"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Current Temperature:     -- °C" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="nfb-1j-Xtq">
+                                                <rect key="frame" x="0.0" y="8" width="182" height="36"/>
+                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ucc-I1-pQN">
+                                                <rect key="frame" x="202" y="11" width="182" height="30"/>
+                                                <color key="backgroundColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <state key="normal" title="Save weather data">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="saveButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="caK-3B-neo"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="GOI-yO-PIs"/>
+                                    <constraint firstAttribute="bottom" secondItem="phT-TK-iEu" secondAttribute="bottom" constant="8" id="I8Z-b1-9xI"/>
+                                    <constraint firstItem="phT-TK-iEu" firstAttribute="top" secondItem="sll-PG-eCQ" secondAttribute="top" constant="8" id="Kwq-m8-OEh"/>
+                                    <constraint firstItem="phT-TK-iEu" firstAttribute="leading" secondItem="sll-PG-eCQ" secondAttribute="leading" constant="15" id="MB1-04-r3M"/>
+                                    <constraint firstAttribute="trailing" secondItem="phT-TK-iEu" secondAttribute="trailing" constant="15" id="eqP-YE-h9k"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ZLo-RM-bBA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6AL-Sw-Xb3"/>
+                            <constraint firstItem="ZLo-RM-bBA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6cR-3k-taa"/>
+                            <constraint firstItem="sll-PG-eCQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="6f8-yd-QcI"/>
+                            <constraint firstItem="ZLo-RM-bBA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6yW-uS-egH"/>
+                            <constraint firstItem="sll-PG-eCQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="KCR-at-0NX"/>
+                            <constraint firstItem="sll-PG-eCQ" firstAttribute="top" secondItem="ZLo-RM-bBA" secondAttribute="bottom" id="REy-eF-eLt"/>
+                            <constraint firstItem="VLX-04-TnI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XN2-up-BPu"/>
+                            <constraint firstItem="sll-PG-eCQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="n3x-FN-CFO"/>
+                            <constraint firstItem="VLX-04-TnI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oZg-VJ-bQN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Weather Logger" id="lGr-Np-jv3"/>
+                    <connections>
+                        <outlet property="currentTemperatureLabel" destination="nfb-1j-Xtq" id="PKt-qV-WUw"/>
+                        <outlet property="infoView" destination="sll-PG-eCQ" id="Ics-0h-7Zp"/>
+                        <outlet property="noDataStackView" destination="VLX-04-TnI" id="yir-ms-Aap"/>
+                        <outlet property="saveButton" destination="Ucc-I1-pQN" id="AbF-Id-HUz"/>
+                        <outlet property="tableView" destination="ZLo-RM-bBA" id="1MY-dp-vNT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="129.91071428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="1h4-Uj-2Vh">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="cGW-Fw-WPy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Nlx-Ro-8Qe">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="IG1-LP-URp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fTq-J0-a9m" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="129.91071428571428"/>
+        </scene>
+    </scenes>
+</document>
